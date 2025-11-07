@@ -61,7 +61,7 @@ app.post('/api/items', async (req, res) => {
 
 // PUT/PATCH Update Item (Update)
 // ใช้ PUT เพื่ออัพเดท Item ที่ระบุด้วย ID
-app.put('/api/items/:id', async (req, res) => {
+app.patch('/api/items/:id', async (req, res) => {
     try {
         const updatedItem = await Item.findByIdAndUpdate(
             req.params.id, 
